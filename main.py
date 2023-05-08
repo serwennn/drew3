@@ -18,14 +18,14 @@ bot.remove_command('help')
 @bot.command()
 async def host(ctx):
     await ctx.send(f"Current host time: {datetime.datetime.now().ctime()}\n"
-                   f"Start host time: {startTime}")
+                   f"Start host time: {start_time}")
 
 # RUN
 @bot.event
 async def on_ready():
 
     print(f"Loggined as {bot.user.name}#{bot.user.discriminator} (USER ID: {bot.user.id})\n"
-          f"Start time: {startTime}")
+          f"Start time: {start_time}")
 
 for category in os.listdir("./cogs"):
     for file in os.listdir(f"./cogs/{category}"):
@@ -33,5 +33,5 @@ for category in os.listdir("./cogs"):
             bot.load_extension(f"cogs.{category}." + file[:-3])
 
 
-startTime = datetime.datetime.now().ctime()
+start_time = datetime.datetime.now().ctime()
 bot.run(tokens['debug'])
