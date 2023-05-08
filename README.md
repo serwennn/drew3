@@ -1,10 +1,7 @@
 <h1 align="center">🦊・DrewBot Project</h1>
 <p align="center">This is a completely open source discord bot. We would be very happy if you help us improve it or add other features.</p>
 
-<br></br>
 <p align="center">
-<img width=200px src="https://media.discordapp.net/attachments/1012635564719230976/1105059223794098207/a76823b8ed3b626c.png?width=527&height=527" alt="DrewBot logo">
-<img width=200px src="https://media.discordapp.net/attachments/1012635564719230976/1105059224033181746/33b49567c7138dda.png?width=527&height=527" alt="DrewBot logo">
 <img width=200px src="https://media.discordapp.net/attachments/1012635564719230976/1105059223508881488/logopng.png?width=527&height=527" alt="DrewBot logo">
 </p>
 <p align="center">Logo by CreativeFunduk</p>
