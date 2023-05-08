@@ -15,8 +15,8 @@ class Purge(commands.Cog):
         dm_permission=False
     )
     async def purge(self, ctx: ApplicationCommandInteraction, count: int) -> None:
-        await ctx.channel.purge(limit=count)
-        await ctx.send(f"Было очищено {count} сообщений.", ephemeral=True)
+        messages = await ctx.channel.purge(limit=count)
+        await ctx.send(f"Было очищено {len(messages)} сообщений.", ephemeral=True)
 
 
 def setup(bot: commands.Bot) -> None:
