@@ -1,5 +1,5 @@
 <h1 align="center">🦊・DrewBot Project</h1>
-This is a completely open source discord bot. We would be very happy if you help us improve it or add other features.
+<p align="center">This is a completely open source discord bot. We would be very happy if you help us improve it or add other features.</p>
 
 <br></br>
 <p align="center">
