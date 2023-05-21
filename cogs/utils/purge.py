@@ -1,6 +1,7 @@
-from disnake import ApplicationCommandInteraction
+from disnake import ApplicationCommandInteraction, Embed
 from disnake.ext import commands
 
+from configs import configs
 
 class Purge(commands.Cog):
 
@@ -15,9 +16,17 @@ class Purge(commands.Cog):
         description = "Удаляет сообщения.",
         dm_permission = False
     )
-    async def purge(self, ctx: ApplicationCommandInteraction, count: int) -> None:
+    async def purge(
+        self, ctx: ApplicationCommandInteraction,
+        count: int
+    ) -> None:
         messages = await ctx.channel.purge(limit=count)
-        await ctx.send(f"Было очищено {len(messages)} сообщений.", ephemeral=True)
+
+        embed = Embed(
+            description = f"Было очищено { len(messages) } из { count } сообщений.",
+            color = configs['color']
+        )
+        await ctx.send(embed = embed, ephemeral=True)
 
 
 def setup(bot: commands.Bot) -> None:

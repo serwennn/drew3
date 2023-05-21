@@ -4,7 +4,7 @@ import os
 import disnake
 from disnake.ext import commands
 
-from tokens import tokens
+from configs import tokens
 
 bot = commands.Bot(
     command_prefix=commands.when_mentioned_or("!"),

@@ -17,6 +17,8 @@ class ErrorHandler(commands.Cog):
     ) -> None:
         if isinstance(error, commands.MissingPermissions):
             await ctx.send("У вас недостаточно полномочий для выполнения команды.")
+        else:
+            await ctx.send(error)
         
 
 
