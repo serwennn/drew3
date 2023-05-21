@@ -1,6 +1,7 @@
-from disnake import ApplicationCommandInteraction
+from disnake import ApplicationCommandInteraction, Embed
 from disnake.ext import commands
 
+from configs import configs
 
 class ErrorHandler(commands.Cog):
 
@@ -15,10 +16,15 @@ class ErrorHandler(commands.Cog):
         self, ctx: ApplicationCommandInteraction,
         error
     ) -> None:
+        
+        embed = Embed(color = configs['color'])
         if isinstance(error, commands.MissingPermissions):
-            await ctx.send("У вас недостаточно полномочий для выполнения команды.")
+            embed.description = "У вас недостаточно полномочий для выполнения команды."
+        elif isinstance(error, commands.BotMissingPermissions):
+            embed.description = "У меня недостаточно полномочий для выполнения команды."
         else:
-            await ctx.send(error)
+            embed.description = f"Похоже произошла какая-то непредвиденная ошибка. Свяжитесь с seru#2356 ([Ссылка на аккаунт](https://discordapp.com/users/735371414533701672)) и отправьте ему это:\n```{error}```"
+        await ctx.send(embed = embed)
         
 
 

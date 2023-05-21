@@ -16,6 +16,8 @@ class Purge(commands.Cog):
         description = "Удаляет сообщения.",
         dm_permission = False
     )
+    @commands.has_permissions(manage_messages = True)
+    @commands.bot_has_permissions(manage_messages = True)
     async def purge(
         self, ctx: ApplicationCommandInteraction,
         count: int
@@ -27,6 +29,10 @@ class Purge(commands.Cog):
             color = configs['color']
         )
         await ctx.send(embed = embed, ephemeral=True)
+    
+    # @purge.error
+    # async def purge_error(error):
+    #     if isinstance(error, commands.)
 
 
 def setup(bot: commands.Bot) -> None:
