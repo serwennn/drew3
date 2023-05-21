@@ -28,14 +28,17 @@ async def host(ctx):
 # RUN
 @bot.event
 async def on_ready():
-    print(f"Logged as {bot.user} (USER ID: {bot.user.id})\n"
+    print(f"Logged in as {bot.user} (USER ID: {bot.user.id})\n"
           f"Start time: {start_time}")
 
 
 for category in os.listdir("cogs"):
-    for file in os.listdir(f"cogs/{category}"):
-        if file.endswith(".py"):
-            bot.load_extension(f"cogs.{category}.{file[:-3]}")
+    if category.endswith(".py"):
+        bot.load_extension(f"cogs.{category[:-3]}")
+    else:
+        for file in os.listdir(f"cogs/{category}"):
+            if file.endswith(".py"):
+                bot.load_extension(f"cogs.{category}.{file[:-3]}")
 
 start_time = datetime.datetime.now().ctime()
 bot.run(tokens['debug'])

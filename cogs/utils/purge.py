@@ -3,6 +3,7 @@ from disnake.ext import commands
 
 
 class Purge(commands.Cog):
+
     def __init__(self, bot: commands.Bot) -> None:
         self.bot = bot
 
@@ -10,9 +11,9 @@ class Purge(commands.Cog):
         print(f"[COG] {self.__cog_name__} was loaded.")
 
     @commands.slash_command(
-        name="purge",
-        description="Удаляет сообщения.",
-        dm_permission=False
+        name = "purge",
+        description = "Удаляет сообщения.",
+        dm_permission = False
     )
     async def purge(self, ctx: ApplicationCommandInteraction, count: int) -> None:
         messages = await ctx.channel.purge(limit=count)
