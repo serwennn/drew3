@@ -37,7 +37,7 @@ class About(commands.Cog):
         )
         embed.add_field(
             name = "⚙️・Техническая информация:",
-            value = f"Версия: { configs['version'] }\nДата релиза:{ configs['date'] }\nКол-во серверов:{ len(self.bot.guilds) }"
+            value = f"Версия: { configs['version'] }\nДата релиза: { configs['date'] }\nКол-во серверов: { len(self.bot.guilds) }\nПинг: { round(self.bot.latency * 1000) }мс."
         )
         embed.set_footer(text = "(c) 2022-2023 seru/DrewSupport.kz — Делаем с любовью <3")
 

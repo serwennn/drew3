@@ -1,6 +1,6 @@
 configs = {
-    "version": "3.0a",
-    "date": "2023/05/22",
+    "version": "3.0 Alpha",
+    "date": "2023/05/23",
 
     "color": 0xf4a261 # Embed color
 }
