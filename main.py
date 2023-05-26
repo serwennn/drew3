@@ -33,12 +33,7 @@ async def on_ready():
 
 
 for category in os.listdir("cogs"):
-    if category.endswith(".py"):
-        bot.load_extension(f"cogs.{category[:-3]}")
-    else:
-        for file in os.listdir(f"cogs/{category}"):
-            if file.endswith(".py"):
-                bot.load_extension(f"cogs.{category}.{file[:-3]}")
+    bot.load_extensions(f"cogs/{category}")
 
 start_time = datetime.datetime.now().ctime()
 bot.run(tokens['debug'])
