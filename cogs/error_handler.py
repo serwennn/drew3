@@ -18,15 +18,14 @@ class ErrorHandler(commands.Cog):
     ) -> None:
         
         embed = Embed(color = configs['color'])
-        if isinstance(error, commands.MissingPermissions):
-            embed.description = "У вас недостаточно полномочий для выполнения команды."
-        elif isinstance(error, commands.BotMissingPermissions):
-            embed.description = "У меня недостаточно полномочий для выполнения команды."
-        else:
-            embed.description = f"Похоже произошла какая-то непредвиденная ошибка. Свяжитесь с seru#2356 ([Ссылка на аккаунт](https://discordapp.com/users/735371414533701672)) и отправьте ему это:\n```{error}```"
-        await ctx.send(embed = embed)
-        
 
+        if isinstance(error, commands.MissingPermissions):
+            embed.description = "Хм, видимо у вас недостаточно прав для выполнения этой команды."
+        elif isinstance(error, commands.BotMissingPermissions):
+            embed.description = "Хм, видимо у меня недостаточно прав для выполнения этой команды."
+        else:
+            embed.description = f"Хм, видимо произошла какая-то непредвиденная ошибка. Свяжитесь с seru#2356 ([Ссылка на аккаунт](https://discordapp.com/users/735371414533701672)) и отправьте ему это:\n```{error}```"
+        await ctx.send(embed = embed)
 
 
 def setup(bot: commands.Bot) -> None:

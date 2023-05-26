@@ -6,7 +6,7 @@ configs = {
 }
 
 tokens = {
-    # That's not rickroll, that's better.
+    # It's not rickroll, it's better.
     "release": "https://www.youtube.com/watch?v=dyuBkX-BkN8&list=RDGMEMhCgTQvcskbGUxqI4Sn2QYw&start_radio=1&ab_channel=HuiJS",
     "debug": "https://www.youtube.com/watch?v=dyuBkX-BkN8&list=RDGMEMhCgTQvcskbGUxqI4Sn2QYw&start_radio=1&ab_channel=HuiJS"
 }

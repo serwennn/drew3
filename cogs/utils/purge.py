@@ -13,7 +13,7 @@ class Purge(commands.Cog):
 
     @commands.slash_command(
         name = "purge",
-        description = "Удаляет сообщения.",
+        description = "Удаляет сообщения",
         dm_permission = False
     )
     @commands.has_permissions(manage_messages = True)
@@ -28,11 +28,10 @@ class Purge(commands.Cog):
             description = f"Было очищено { len(messages) } из { count } сообщений.",
             color = configs['color']
         )
+
+        if len(messages) < count: embed.set_footer(text = "Некоторые сообщения могли быть проигнорированы.")
+
         await ctx.send(embed = embed, ephemeral=True)
-    
-    # @purge.error
-    # async def purge_error(error):
-    #     if isinstance(error, commands.)
 
 
 def setup(bot: commands.Bot) -> None:
