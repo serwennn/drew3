@@ -18,7 +18,7 @@ class Server(commands.Cog):
         dm_permission = False
     )
     async def server(
-        self, ctx: ApplicationCommandInteraction,
+        self, ctx: ApplicationCommandInteraction
     ) -> None:
         
         embed = Embed(
