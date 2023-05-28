@@ -38,7 +38,7 @@ class Server(commands.Cog):
         )
         embed.add_field(
             name = "☕・Каналы:",
-            value = f"sdansdauinfue"
+            value = f"sdansdauifue"
         )
         embed.add_field(
             name = "・Прочее:",
