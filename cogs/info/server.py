@@ -14,11 +14,11 @@ class Server(commands.Cog):
 
     @commands.slash_command(
         name = "server",
-        description = "Информация о этом сервере",
+        description = "Статистика этого сервера",
         dm_permission = False
     )
     async def server(
-        self, ctx: ApplicationCommandInteraction
+        self, ctx: ApplicationCommandInteraction,
     ) -> None:
         
         embed = Embed(
@@ -55,7 +55,7 @@ class Server(commands.Cog):
             inline = True
         )
         embed.add_field(
-            name = "🛡️・Уровень верификации:",
+            name = "🛡️・Уровень проверки (верификации):",
             value = ver_level,
             inline = False
         )
