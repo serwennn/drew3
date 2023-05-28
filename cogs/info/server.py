@@ -51,7 +51,7 @@ class Server(commands.Cog):
         )
         embed.add_field(
             name = "✨・Прочее:",
-            value = f"Всего категорий: { len(ctx.guild.categories) }\nРолей: { len(ctx.guild.roles) }\nЭмодзи: { len(ctx.guild.emojis) }",
+            value = f"Категорий: { len(ctx.guild.categories) }\nРолей: { len(ctx.guild.roles) }\nЭмодзи: { len(ctx.guild.emojis) }",
             inline = True
         )
         embed.add_field(
