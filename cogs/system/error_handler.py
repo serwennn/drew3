@@ -25,7 +25,7 @@ class ErrorHandler(commands.Cog):
         elif isinstance(error, commands.BotMissingPermissions):
             embed.description = "Хм, видимо у меня недостаточно прав для выполнения этой команды."
         else:
-            embed.description = f"Хм, видимо произошла какая-то непредвиденная ошибка." \
+            embed.description = f"Хм, видимо произошла какая-то непредвиденная ошибка. " \
                                 f"Свяжитесь с {macros['seruen_link']} и отправьте ему это: \n```{error}```"
         await ctx.send(embed=embed)
 

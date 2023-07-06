@@ -31,7 +31,7 @@ class Purge(commands.Cog):
 
         if len(messages) < count: embed.set_footer(text = "Некоторые сообщения могли быть проигнорированы.")
 
-        await ctx.send(embed = embed, ephemeral=True)
+        await ctx.send(embed=embed, ephemeral=True)
 
 
 def setup(bot: commands.Bot) -> None:

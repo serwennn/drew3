@@ -12,5 +12,5 @@ macros = {
 tokens = {
     # It's not rickroll, it's better.
     "release": "https://www.youtube.com/watch?v=dyuBkX-BkN8&list=RDGMEMhCgTQvcskbGUxqI4Sn2QYw&start_radio=1&ab_channel=HuiJS",
-    "debug": "ff"
+    "debug": "MTA0ODYwNjUxNDE5NTIxNDM0Nw.GAVhb4.4ZN5UK4EgfPDOSwIUpRy2Od8aMEWAN0mTrH1eM"
 }
