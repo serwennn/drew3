@@ -7,7 +7,7 @@
 <p align="center">Logo by CreativeFunduk</p>
 
 ## To contact the author:
-Discord account: seltfox#2356\
+Discord: @aru_onelove\
 Email: nassen.d230@mail.kz
 
 ## Bot Information:
